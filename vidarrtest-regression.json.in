@@ -64,7 +64,7 @@
                 ],
                 "type": "ALL"
             },
-            "trust4.consesnsusAssembly": {
+            "trust4.consensusAssembly": {
                 "contents": [
                     {
                         "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_large_@JENKINSID@"
@@ -147,7 +147,7 @@
                 ],
                 "type": "ALL"
             },
-            "trust4.consesnsusAssembly": {
+            "trust4.consensusAssembly": {
                 "contents": [
                     {
                         "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_small_@JENKINSID@"
