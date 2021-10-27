@@ -1,0 +1,13 @@
+## Commands
+This section lists command(s) run by trust4 workflow
+
+* Running trust4
+
+### TRUST4 runs a single command which produces a number of outputs which should be analyzed in a downstream process 
+
+```
+
+ set -euo pipefail
+ run-trust4 -f BCRTCR.fa [--ref refIMGT.fa] [-t THREADS] -1 FASTQ_R1 -2 FASTQ_R2 -o OUTPUT_PREFIX 
+
+```

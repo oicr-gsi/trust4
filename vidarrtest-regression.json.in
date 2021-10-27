@@ -1,0 +1,168 @@
+[
+    {
+      "arguments": {
+          "trust4.fastqR1": {
+              "contents": {
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_A_R1_001.fastq.gz",
+                  "externalIds": [
+                      {
+                          "id": "TEST",
+                          "provider": "TEST"
+                      }
+                  ]
+              },
+              "type": "EXTERNAL"
+          },
+          "trust4.fastqR2": {
+              "contents": {
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_A_R2_001.fastq.gz",
+                  "externalIds": [
+                      {
+                          "id": "TEST",
+                          "provider": "TEST"
+                      }
+                  ]
+              },
+              "type": "EXTERNAL"
+          },
+          "trust4.runTrust4.timeout": null,
+          "trust4.runTrust4.jobMemory": null,
+          "trust4.runTrust4.modules": "",
+          "trust4.runTrust4.refIMGT": "",
+          "trust4.runTrust4.bcrtcrFasta": "",
+          "trust4.runTrust4.threads": null,
+	  "trust4.outputFileNamePrefix": "TEST_LARGE"
+        },
+        "description": "TRUST4 workflow test",
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
+        "id": "trust4_test_large",
+        "metadata": {
+            "trust4.cdrReport": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_large_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "trust4.finalContigs": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_large_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "trust4.finalReport": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_large_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "trust4.consesnsusAssembly": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_large_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/trust4/output_metrics/trust4_test_large.metrics",
+                "type": "script"
+            }
+        ]
+    },
+    {
+      "arguments": {
+          "trust4.fastqR1": {
+              "contents": {
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_B_R1_001.fastq.gz",
+                  "externalIds": [
+                      {
+                          "id": "TEST",
+                          "provider": "TEST"
+                      }
+                  ]
+              },
+              "type": "EXTERNAL"
+          },
+          "trust4.fastqR2": {
+              "contents": {
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_B_R2_001.fastq.gz",
+                  "externalIds": [
+                      {
+                          "id": "TEST",
+                          "provider": "TEST"
+                      }
+                  ]
+              },
+              "type": "EXTERNAL"
+          },
+          "trust4.runTrust4.timeout": null,
+          "trust4.runTrust4.jobMemory": null,
+          "trust4.runTrust4.modules": "",
+          "trust4.runTrust4.refIMGT": "",
+          "trust4.runTrust4.bcrtcrFasta": "",
+          "trust4.runTrust4.threads": null,
+	  "trust4.outputFileNamePrefix": "TEST_SMALL"
+        },
+        "description": "TRUST4 workflow test",
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
+        "id": "trust4_test_small",
+        "metadata": {
+            "trust4.cdrReport": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_small_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+             "trust4.finalContigs": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_small_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "trust4.finalReport": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_small_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            },
+            "trust4.consesnsusAssembly": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_trust4_trust4_test_small_@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/trust4/output_metrics/trust4_test_small.metrics",
+                "type": "script"
+            }
+        ]
+    }
+]
