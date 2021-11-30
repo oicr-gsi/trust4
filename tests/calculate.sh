@@ -1,5 +1,15 @@
 #!/bin/bash
 cd $1
-for t in *fa;do wc -l $t;done | sed 's! .*/.*!!'
-for t in *tsv;do wc -l $t;done | sed 's! .*/.*!!'
-for t in *out;do wc -l $t;done | sed 's! .*/.*!!'
+
+#
+# We have three types of files to check
+#  .fa files - 
+# .tsv files -
+# .out files -
+
+echo ".fa files:" 
+for t in *fa;do md5sum $t;done | sort -V
+echo ".tsv files:"
+for t in *tsv;do md5sum $t;done | sort -V
+echo ".out files:"
+for t in *out;do md5sum $t;done | sort -V
