@@ -21,8 +21,7 @@ Parameter|Value|Description
 ---|---|---
 `fastqR1`|File|Input file with the first mate reads.
 `fastqR2`|File|Input file with the second mate reads.
-`runTrust4.bcrtcrFasta`|String|BCR TCR fasta
-`runTrust4.refIMGT`|String|Detailed .fa with chromosomal coordinates, IMGT: http://www.imgt.org//download/V-QUEST/IMGT_V-QUEST_reference_directory/
+`reference`|String|Reference assembly id
 
 
 #### Optional workflow parameters:

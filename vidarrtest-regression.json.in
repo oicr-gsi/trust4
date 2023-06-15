@@ -25,11 +25,10 @@
               },
               "type": "EXTERNAL"
           },
+          "trust4.reference": "hg38",
           "trust4.runTrust4.timeout": null,
           "trust4.runTrust4.jobMemory": null,
           "trust4.runTrust4.modules": "trust4/1.0.5.1",
-          "trust4.runTrust4.refIMGT": "$TRUST4_ROOT/human_IMGT+C.fa",
-          "trust4.runTrust4.bcrtcrFasta": "$TRUST4_ROOT/hg38_bcrtcr.fa",
           "trust4.runTrust4.threads": null,
 	  "trust4.outputFileNamePrefix": "TEST_LARGE"
         },
@@ -108,11 +107,10 @@
               },
               "type": "EXTERNAL"
           },
+          "trust4.reference": "hg38",
           "trust4.runTrust4.timeout": null,
           "trust4.runTrust4.jobMemory": null,
           "trust4.runTrust4.modules": "trust4/1.0.5.1",
-          "trust4.runTrust4.refIMGT": "$TRUST4_ROOT/human_IMGT+C.fa",
-          "trust4.runTrust4.bcrtcrFasta": "$TRUST4_ROOT/hg38_bcrtcr.fa",
           "trust4.runTrust4.threads": null,
 	  "trust4.outputFileNamePrefix": "TEST_SMALL"
         },
