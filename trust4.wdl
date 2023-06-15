@@ -1,5 +1,10 @@
 version 1.0
 
+struct trustResources {
+    String refIMGT
+    String bcrtcrFasta
+}
+
 # ================================================================================
 # Workflow accepts two fastq files for paired-end sequencing, with R1 and R2 reads
 # ================================================================================
@@ -7,16 +12,37 @@ workflow trust4 {
 input {
   File  fastqR1 
   File  fastqR2
+  String reference
   String outputFileNamePrefix = ""
 }
 
 String sampleID = if outputFileNamePrefix=="" then basename(fastqR1, ".fastq.gz") else outputFileNamePrefix
 
-call runTrust4 {input: fastqR1 = fastqR1, fastqR2 = fastqR2, outputPrefix = sampleID}
+Map[String,trustResources] trust_res_by_genome = {
+    "hg19": {
+       "refIMGT": "$TRUST4_ROOT/human_IMGT+C.fa",
+       "bcrtcrFasta": "$TRUST4_ROOT/hg19_bcrtcr.fa"
+    },
+    "hg38": {
+       "refIMGT": "$TRUST4_ROOT/human_IMGT+C.fa",
+       "bcrtcrFasta": "$TRUST4_ROOT/hg38_bcrtcr.fa"
+    },
+    "mm10": {
+       "refIMGT": "$TRUST4_ROOT/mouse/mouse_IMGT+C.fa",
+       "bcrtcrFasta": "$TRUST4_ROOT/mouse/GRCm38_bcrtcr.fa"
+    }      
+}
+
+call runTrust4 {input: fastqR1 = fastqR1, 
+                       fastqR2 = fastqR2,
+                       refIMGT = trust_res_by_genome[reference].refIMGT,
+                       bcrtcrFasta  = trust_res_by_genome[reference].bcrtcrFasta,
+                       outputPrefix = sampleID}
 
 parameter_meta {
   fastqR1: "Input file with the first mate reads."
   fastqR2: "Input file with the second mate reads."
+  reference: "Reference assembly id"
   outputFileNamePrefix: "Output prefix, customizable. Default is the first file's basename."
 }
 
