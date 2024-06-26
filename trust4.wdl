@@ -57,11 +57,23 @@ meta {
       }
     ]
     output_meta: {
-        cdrReport: "report contains CDR1,2,3 and gene information for each consensus assemblies",
-        finalContigs: "contigs and corresponding nucleotide weight",
-        finalReport: "report file focusing on CDR3 and is compatible with other repertoire analysis tool such as VDJTools",
-        consensusAssembly: "fasta file for the annotation of the consensus assembly"
+    cdrReport: {
+        description: "report contains CDR1,2,3 and gene information for each consensus assemblies",
+        vidarr_label: "cdrReport"
+    },
+    finalContigs: {
+        description: "contigs and corresponding nucleotide weight",
+        vidarr_label: "finalContigs"
+    },
+    finalReport: {
+        description: "report file focusing on CDR3 and is compatible with other repertoire analysis tool such as VDJTools",
+        vidarr_label: "finalReport"
+    },
+    consensusAssembly: {
+        description: "fasta file for the annotation of the consensus assembly",
+        vidarr_label: "consensusAssembly"
     }
+}
 }
 
 
