@@ -41,28 +41,28 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`cdrReport`|File|report contains CDR1,2,3 and gene information for each consensus assemblies
-`finalContigs`|File|contigs and corresponding nucleotide weight
-`finalReport`|File|report file focusing on CDR3 and is compatible with other repertoire analysis tool such as VDJTools
-`consensusAssembly`|File|fasta file for the annotation of the consensus assembly
+Output | Type | Description | Labels
+---|---|---|---
+`cdrReport`|File|report contains CDR1,2,3 and gene information for each consensus assemblies|vidarr_label: cdrReport
+`finalContigs`|File|contigs and corresponding nucleotide weight|vidarr_label: finalContigs
+`finalReport`|File|report file focusing on CDR3 and is compatible with other repertoire analysis tool such as VDJTools|vidarr_label: finalReport
+`consensusAssembly`|File|fasta file for the annotation of the consensus assembly|vidarr_label: consensusAssembly
 
 
 ## Commands
- This section lists command(s) run by trust4 workflow
+This section lists command(s) run by trust4 workflow
  
- * Running trust4
+* Running trust4
  
- ### TRUST4 runs a single command which produces a number of outputs which should be analyzed in a downstream process 
+### TRUST4 runs a single command which produces a number of outputs which should be analyzed in a downstream process 
  
- ```
+```
  
   set -euo pipefail
   run-trust4 -f BCRTCR.fa [--ref refIMGT.fa] [-t THREADS] -1 FASTQ_R1 -2 FASTQ_R2 -o OUTPUT_PREFIX 
  
- ```
- ## Support
+```
+## Support
 
 For support, please file an issue on the [Github project](https://github.com/oicr-gsi) or send an email to gsi@oicr.on.ca .
 
