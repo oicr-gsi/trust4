@@ -3,7 +3,7 @@
       "arguments": {
           "trust4.fastqR1": {
               "contents": {
-                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_A_R1_001.fastq.gz",
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/test_inputs/EPT_Test01_R1.fastq.gz",
                   "externalIds": [
                       {
                           "id": "TEST",
@@ -15,7 +15,7 @@
           },
           "trust4.fastqR2": {
               "contents": {
-                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_A_R2_001.fastq.gz",
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/test_inputs/EPT_Test01_R2.fastq.gz",
                   "externalIds": [
                       {
                           "id": "TEST",
@@ -76,7 +76,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/trust4/output_metrics/trust4_test_large.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/trust4/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ]
@@ -85,7 +85,7 @@
       "arguments": {
           "trust4.fastqR1": {
               "contents": {
-                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_B_R1_001.fastq.gz",
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/test_inputs/EPT_Test02_R1.fastq.gz",
                   "externalIds": [
                       {
                           "id": "TEST",
@@ -97,7 +97,7 @@
           },
           "trust4.fastqR2": {
               "contents": {
-                  "configuration": "/.mounts/labs/gsi/testdata/trust4/input_data/EPT105_B_R2_001.fastq.gz",
+                  "configuration": "/.mounts/labs/gsi/testdata/trust4/test_inputs/EPT_Test02_R2.fastq.gz",
                   "externalIds": [
                       {
                           "id": "TEST",
@@ -158,7 +158,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/trust4/output_metrics/trust4_test_small.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/trust4/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ]
